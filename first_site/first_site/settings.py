@@ -78,7 +78,12 @@ WSGI_APPLICATION = 'first_site.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': 'ventboard',
+        'USER': 'postgres',
+        'PASSWORD': 'football',
+        'HOST': 'localhost',
+        'PORT': '5432',
+
     }
 }
 
