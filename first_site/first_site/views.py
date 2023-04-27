@@ -22,3 +22,6 @@ def insertpost(request):
         
     else:
         return render(request, 'create.html')
+    
+
+    

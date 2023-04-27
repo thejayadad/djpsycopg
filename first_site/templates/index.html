@@ -9,9 +9,12 @@
 <body>
     
     <h2>All Post</h2>
-    {% for result in data%}
+    <header>
+        <a href="{% url 'insertpost' %}">Create Post</a>
+    </header>
+    <!-- {% for result in data%}
     <h4>{{ result.title}}</h4>
     <p>{{result.body}}</p>
-    {% endfor%}
+    {% endfor%} -->
 </body>
 </html>
