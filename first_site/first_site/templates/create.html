@@ -8,18 +8,19 @@
 </head>
 <body>
     <h3>Create Post</h3>
-    <form method="POST">
+     <form method="POST">
         {% csrf_token%}
-        <input placeholder="Please Enter Title" name="title">
-        <input placeholder="Whats on your mind?" name="body">
+        <label for="title"></label>
+        <input type="text" placeholder="Please Enter Title" name="title">
+        <input type="text" placeholder="Whats on your mind?" name="content">
         <button type="submit">Submit</button>
     
-    <!-- {% if messages%}
+  {% if messages%}
     {% for mess in messages%}
         <p style="color: green;">{{mess}}</p>
     {%endfor%}
-    {%endif%} -->
-    </form>
+    {%endif%} 
+    </form> 
     
 </body>
 </html>

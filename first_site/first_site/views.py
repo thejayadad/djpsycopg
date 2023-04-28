@@ -1,21 +1,21 @@
 
 
 from django.shortcuts import render
-from first_site.models import PostModel
+from first_site.models import post
 from django.contrib import messages
 
 def homepage(request):
-    showall = PostModel.objects.all()
-    return render(request, 'index.html', {'data': showall})
+    showall = post.objects.all()
+    return render(request, 'index.html', {'showall': showall})
 
 
 
 def insertpost(request): 
     if request.method == "POST":
-        if request.POST.get('title') and request.POST.get('body'):
-            savepost = PostModel()
+        if request.POST.get('title') and request.POST.get('content'):
+            savepost = post()
             savepost.title = request.POST.get('title')
-            savepost.body = request.POST.get('body')
+            savepost.content = request.POST.get('content')
             savepost.save()
             messages.success(request, "Post Saved!")
             return render(request, 'create.html')
@@ -24,4 +24,3 @@ def insertpost(request):
         return render(request, 'create.html')
     
 
-    

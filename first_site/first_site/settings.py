@@ -56,7 +56,7 @@ ROOT_URLCONF = 'first_site.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -77,13 +77,12 @@ WSGI_APPLICATION = 'first_site.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        "ENGINE": "django.db.backends.postgresql",
         'NAME': 'ventboard',
         'USER': 'postgres',
         'PASSWORD': 'football',
         'HOST': 'localhost',
         'PORT': '5432',
-
     }
 }
 
